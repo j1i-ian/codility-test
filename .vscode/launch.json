@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run with node",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "node",
+            "cwd": "${workspaceRoot}",
+            "console": "integratedTerminal",
+            "args": [
+                "${file}"
+            ],
+            "env": {
+                "NODE_ENV": "test"
+            },
+            "internalConsoleOptions": "neverOpen",
+            "sourceMaps": true
+        },
+        {
+            "type": "node",
+            "name": "Mocha Single Test",
+            "request": "launch",
+            "program": "${workspaceRoot}/node_modules/.bin/mocha",
+            "args": [
+                "--config",
+                ".mocharc.yml",
+                "${file}"
+            ],
+            "cwd": "${workspaceRoot}",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+        }
+    ]
+}
