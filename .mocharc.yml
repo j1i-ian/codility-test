@@ -1,0 +1,16 @@
+reporter:
+  - spec
+reporter-options: output=.docs/report.html
+package: ./package.json
+parallel: false
+timeout: 5000
+ui: bdd
+recursive: true
+jobs: 10
+exclude:
+  - node_modules
+# spec:
+#   - './*{.spec}.js'
+watch: false
+watch-files:
+  - './*{.spec}.js'
