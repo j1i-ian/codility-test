@@ -10,13 +10,11 @@ describe('01 binary gap test', () => {
         { givenValue: 20, expectedValue: 1 },
         { givenValue: 15, expectedValue: 0 },
         { givenValue: 32, expectedValue: 0 }
-    ].forEach(function ({givenValue, expectedValue}) {
-
-        it(`should be passed: number is given ${givenValue}, expected: ${expectedValue}`, function() {
+    ].forEach(function ({ givenValue, expectedValue }) {
+        it(`should be passed: number is given ${givenValue}, expected: ${expectedValue}`, function () {
             const actual = solution(givenValue);
 
             expect(actual).equals(expectedValue);
-        })
+        });
     });
-
 });

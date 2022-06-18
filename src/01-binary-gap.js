@@ -1,5 +1,4 @@
 export default function solution(givenNumber) {
-
     let maxBinaryLength = 0;
     let gapOn = false;
 
