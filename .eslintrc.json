@@ -1,0 +1,199 @@
+{
+    "plugins": [
+        "unused-imports",
+        "import",
+        "jsdoc"
+    ],
+    "extends": [
+        "plugin:prettier/recommended"
+    ],
+    "root": true,
+    "env": {
+        "node": true,
+        "jest": true
+    },
+    "rules": {
+        "prettier/prettier": ["error", {}, {
+            "usePrettierrc": true
+        }],
+        "indent": "error",
+        "arrow-body-style": "error",
+        "arrow-parens": [
+            "error",
+            "always"
+        ],
+        "brace-style": [
+            "error",
+            "error"
+        ],
+        "comma-dangle": "error",
+        "complexity": "error",
+        "constructor-super": "error",
+        "curly": "error",
+        "dot-notation": "error",
+        "eol-last": "error",
+        "eqeqeq": [
+            "error",
+            "smart"
+        ],
+        "guard-for-in": "error",
+        "id-blacklist": "error",
+        "id-match": "error",
+        "import/no-deprecated": "error",
+        "import/no-extraneous-dependencies": "error",
+        "import/no-internal-modules": "error",
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    "parent",
+                    "sibling",
+                    "object",
+                    "type",
+                    "index"
+                ],
+                "pathGroups": [
+                    {
+                        "pattern": "@nestjs/**",
+                        "group": "external"
+                    },
+                    {
+                        "pattern": "@core/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "@config/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "@decorators/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "@interfaces/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "@services/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "@entity/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "@app/**/*",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "./*",
+                        "group": "index"
+                    }
+                ],
+                "pathGroupsExcludedImportTypes": [
+                    "builtin"
+                ]
+            }
+        ],
+        "unused-imports/no-unused-imports": "error",
+        "jsdoc/check-alignment": "error",
+        "jsdoc/check-indentation": "error",
+        "jsdoc/newline-after-description": "error",
+        "max-classes-per-file": [
+            "error",
+            1
+        ],
+        "max-len": [
+            "error",
+            {
+                "code": 180
+            }
+        ],
+        "new-parens": "error",
+        "no-bitwise": "error",
+        "no-caller": "error",
+        "no-cond-assign": "error",
+        "no-console": [
+            "error",
+            {
+                "allow": [
+                    "log",
+                    "dirxml",
+                    "warn",
+                    "error",
+                    "dir",
+                    "timeLog",
+                    "assert",
+                    "clear",
+                    "count",
+                    "countReset",
+                    "group",
+                    "groupCollapsed",
+                    "groupEnd",
+                    "table",
+                    "Console",
+                    "markTimeline",
+                    "profile",
+                    "profileEnd",
+                    "timeline",
+                    "timelineEnd",
+                    "timeStamp",
+                    "context"
+                ]
+            }
+        ],
+        "no-debugger": "error",
+        "no-empty": "error",
+        "no-eval": "error",
+        "no-fallthrough": "error",
+        "no-invalid-this": "error",
+        "no-multiple-empty-lines": "error",
+        "no-new-wrappers": "error",
+        "no-shadow": "error",
+        "no-throw-literal": "warn",
+        "no-trailing-spaces": "error",
+        "no-undef-init": "error",
+        "no-underscore-dangle": "error",
+        "no-unsafe-finally": "error",
+        "no-unused-expressions": "error",
+        "no-unused-labels": "error",
+        "object-shorthand": "error",
+        "one-var": [
+            "error",
+            "never"
+        ],
+        "quote-props": "error",
+        "radix": "error",
+        "space-before-function-paren": "error",
+        "spaced-comment": [
+            "error",
+            "always",
+            {
+                "markers": [
+                    "/"
+                ]
+            }
+        ],
+        "use-isnan": "error",
+        "valid-typeof": "error"
+    },
+    "overrides": [
+        {
+            "files": [ "src/*.spec.ts"],
+            "rules": {
+                "no-unused-expressions": "off",
+                "max-len": "off"
+            }
+        }
+    ]
+}
