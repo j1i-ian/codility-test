@@ -1,5 +1,4 @@
-reporter:
-  - spec
+reporter: 'spec'
 reporter-options: output=.docs/report.html
 package: ./package.json
 parallel: false
